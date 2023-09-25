@@ -7,28 +7,45 @@
 }
 body{
   background-color: hsl(217, 54%, 11%);
-  /* justify-content: center; */
-  /* align-items: center; */
   height: 100vh;
 }
 .main-div{
   background-color: hsl(216, 50%, 16%);
-  height: 65vh;
-  width: 20vw;
-  /* justify-content: center; */
+  height: 425px;
+  width: 230px;
   border-radius: 12px;
   padding: 18px;
   margin: auto;
-  /* position: absolute; */
-  /* justify-content: center; */
-  /* align-self: center; */
   margin-top: 15vh;
 }
+/* class containing both equilibrium and eye icon img*/
+.img-container{
+  position: relative;
+  display: inline-block;
+}
 /* class of the equilibrim image */
-.equilibrium{
-  height: 55%;
-  width: 100%;
+.equilibrium-img{
+  height: 225px;
+  width: 230px;
   border-radius: 8px;
+  cursor: pointer;
+}
+/* class for the eye-icon */
+.eye-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 8px;
+}
+/* class to style the active state and make eye-icon appear */
+.img-container:hover .eye-icon{
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: rgb(45, 216, 208);
+  padding: 90px 72px;
+  height: 45px;
+  width: 85px;
 }
 p{
   font-family: Arial, Helvetica, sans-serif;
@@ -37,17 +54,31 @@ p{
   color: white;
   font-size: large;
   font-weight: 300;
+  cursor: pointer;
+}
+.main-text:hover{
+  color: rgb(45, 216, 208);
 }
 .motto{
+  margin-bottom: 5px;
+}
+.div-text{
   color: rgba(245, 245, 245, 0.429);
   font-weight: 100;
-  font-size: small ;
+  font-size: small;
+  line-height: 1.7;
+}
+.eth-text{
+  color: rgb(45, 216, 208);
+  font-weight: 300;
+  font-size: small;
 }
 /* class that makes the avatar img, icon and text appear on the same line */
 .img-text{
   display: flex;
   align-items: center;
 }
+/* class to separate eth icon and text from clock icon and text on the same line */
 .clock-eth-line{
   justify-content: space-between;
 }
@@ -56,16 +87,25 @@ p{
   margin-right: 7px;
   height: 15px;
 }
-.avatar{
-  height: 23px;
-  border: 0.5px solid white;
-  border-radius: 50%;
-  margin-right: 15px;
-}
+
 hr{
   height: 0.5px;
-  background-color: hsl(214, 29%, 25%);
+  background-color: hsl(215, 32%, 27%);
   border: none;
   margin: 2px 0;
-
 }
+
+.avatar{
+  height: 25px;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.author{
+  color: azure;
+  cursor: pointer;
+}
+.author:hover{
+  color: rgb(45, 216, 208);
+}
+/* I didn't work on mobile design yet abeg */
